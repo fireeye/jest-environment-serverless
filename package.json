@@ -1,0 +1,54 @@
+{
+  "name": "jest-environment-serverless",
+  "version": "0.2.0",
+  "author": "FireEye, Inc. <cx@fireeye.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fireeye/jest-environment-serverless"
+  },
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "main": "src/index.js",
+  "keywords": [
+    "jest",
+    "serverless"
+  ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "test": "npx jest"
+  },
+  "dependencies": {
+    "lambda-wrapper": "^0.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "jest": "^24.7.1",
+    "jest-cli": "^24.7.1",
+    "jest-config": "^24.7.1",
+    "jest-runtime": "^24.7.1",
+    "jest-util": "^24.7.1",
+    "serverless": "^1.40.0"
+  },
+  "peerDependencies": {
+    "jest-environment-node": "23.x || 24.x",
+    "serverless": ">=1.32"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "text"
+    ],
+    "silent": true,
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/__tests__/**/?(*.)+(spec|test).js?(x)",
+      "**/?(*.)+(spec|test).js?(x)"
+    ],
+    "verbose": true
+  }
+}

@@ -1,0 +1,13 @@
+# Copyright (C) 2019 FireEye, Inc. All Rights Reserved. See LICENSE file.
+service: jest-test-suite
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: us-east-1
+  environment:
+    STAGE: prod-stage-test
+functions:
+  hello:
+    handler: handler.hello
+    environment:
+      HELLO: "world ${self:provider.region}"
