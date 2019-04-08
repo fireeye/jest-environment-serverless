@@ -1,10 +1,13 @@
 {
   "name": "jest-environment-serverless",
   "version": "0.2.0",
-  "author": "FireEye, Inc. <cx@fireeye.com>",
+  "author": "FireEye, Inc.",
   "repository": {
     "type": "git",
     "url": "https://github.com/fireeye/jest-environment-serverless"
+  },
+  "bugs": {
+    "url": "https://github.com/fireeye/jest-environment-serverless/issues"
   },
   "license": "SEE LICENSE IN LICENSE.txt",
   "main": "src/index.js",
