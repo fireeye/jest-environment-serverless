@@ -12,10 +12,16 @@ npm install serverless jest jest-environment-serverless
 
 Update your Jest configuration to set the [testEnvironment](https://jestjs.io/docs/en/configuration#testenvironment-string) to `jest-environment-serverless`:
 
+_package.json_
 ```json
 {
-  ...
-  "testEnvironment": "jest-environment-serverless"
+  "name": "my-project",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-serverless"
+  }
 }
 ```
 
@@ -35,6 +41,12 @@ describe('Hello Lambda', () => {
     expect(response).toHaveProperty('message', 'Hi Bob!');
   });
 });
+```
+
+Run your tests:
+
+```shell
+npm test
 ```
 
 ## API
