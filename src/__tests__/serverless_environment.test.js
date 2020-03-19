@@ -2,7 +2,7 @@
 
 const { readConfig } = require('jest-config');
 const Runtime = require('jest-runtime');
-const { Console } = require('jest-util');
+const { CustomConsole } = require('@jest/console');
 
 const path = jest.requireActual('path');
 const ServerlessEnvironment = jest.requireActual('../');
@@ -33,8 +33,8 @@ describe('ServerlessEnvironment', () => {
 
     env1.fakeTimers.useFakeTimers();
 
-    const timer1 = env1.global.setTimeout(() => {}, 0);
-    const timer2 = env1.global.setInterval(() => {}, 0);
+    const timer1 = env1.global.setTimeout(() => { }, 0);
+    const timer2 = env1.global.setInterval(() => { }, 0);
 
     [timer1, timer2].forEach(timer => {
       expect(timer.id).toBeDefined();
@@ -103,15 +103,16 @@ describe('ServerlessEnvironment', () => {
     let LambdaWrapper;
 
     beforeAll(async () => {
-      const { globalConfig, projectConfig } = readConfig([], path.join(__dirname, '../'));
-      const config = Object.assign({}, projectConfig, {
+      const { globalConfig, projectConfig } = await readConfig([], path.join(__dirname, '../'));
+      const config = {
+        ...projectConfig,
         cwd: path.join(__dirname, 'sample_sls_project'),
-      });
+      };
 
       slsEnv = new ServerlessEnvironment(config);
 
       const context = await Runtime.createContext(config, {
-        console: new Console(process.stdout, process.stdout),
+        console: new CustomConsole(process.stdout, process.stdout),
         maxWorkers: globalConfig.maxWorkers,
         watch: false,
         watchman: globalConfig.watchman,

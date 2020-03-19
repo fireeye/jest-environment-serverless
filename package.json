@@ -1,6 +1,6 @@
 {
   "name": "jest-environment-serverless",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "author": "FireEye, Inc.",
   "repository": {
     "type": "git",
@@ -25,20 +25,20 @@
     "lambda-wrapper": "^0.3.0"
   },
   "devDependencies": {
-    "eslint": "^6.0.1",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jest": "^22.7.1",
-    "jest": "^24.8.0",
-    "jest-cli": "^24.8.0",
-    "jest-config": "^24.8.0",
-    "jest-runtime": "^24.8.0",
-    "jest-util": "^24.8.0",
-    "serverless": "^1.41.1"
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.8.2",
+    "jest": "^25.1.0",
+    "jest-cli": "^25.1",
+    "jest-config": "^25.1",
+    "jest-runtime": "^25.1",
+    "@jest/console": "^25.1",
+    "serverless": "^1.66.0"
   },
   "peerDependencies": {
-    "jest-environment-node": "23.x || 24.x",
+    "jest-environment-node": "23.x || 24.x || 25.x",
     "serverless": ">=1.46"
   },
   "jest": {
