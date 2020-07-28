@@ -45,6 +45,10 @@ class ServerlessWrapper extends NodeEnvironment {
       interactive: false,
       servicePath: config.cwd,
     });
+
+    // Prevent Serverless from capturing Jest CLI arguments
+    serverless.cliInputArgv = [];
+
     this.global.ServerlessWrapper.serverless = serverless;
     this.global.ServerlessWrapper.getEnv = this.getEnv;
     this.global.ServerlessWrapper.setEnv = this.setEnv;
