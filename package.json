@@ -1,6 +1,6 @@
 {
   "name": "jest-environment-serverless",
-  "version": "0.2.4",
+  "version": "0.4.0",
   "author": "FireEye, Inc.",
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "serverless"
   ],
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=10.0.0"
   },
   "scripts": {
     "test": "npx jest"
@@ -25,22 +25,25 @@
     "lambda-wrapper": "^0.3.0"
   },
   "devDependencies": {
-    "eslint": "^6.0.1",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jest": "^22.7.1",
-    "jest": "^24.8.0",
-    "jest-cli": "^24.8.0",
-    "jest-config": "^24.8.0",
-    "jest-runtime": "^24.8.0",
-    "jest-util": "^24.8.0",
-    "serverless": "^1.41.1"
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "jest": "^26.2.2",
+    "jest-cli": "^26.2.2",
+    "jest-config": "^26.2.2",
+    "jest-runtime": "^26.2.2",
+    "@jest/console": "^26.2.0",
+    "serverless": "^1.77.1"
   },
   "peerDependencies": {
-    "jest-environment-node": "23.x || 24.x",
+    "jest-environment-node": ">= 23.x",
     "serverless": ">=1.46"
   },
+  "contributors": [
+    "Doug McCall <dhm116@gmail.com>"
+  ],
   "jest": {
     "collectCoverage": true,
     "coverageReporters": [
