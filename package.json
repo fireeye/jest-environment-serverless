@@ -35,7 +35,7 @@
     "jest-config": "^24.8.0",
     "jest-runtime": "^24.8.0",
     "jest-util": "^24.8.0",
-    "serverless": "^1.41.1"
+    "serverless": "^1.83.3"
   },
   "peerDependencies": {
     "jest-environment-node": "23.x || 24.x",
